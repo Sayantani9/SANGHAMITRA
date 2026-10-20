@@ -7,453 +7,558 @@
 <title>Internships at WHY YZ? — Sanghamitra Ventures</title>
 
 <style>
-:root{
-  color-scheme:dark;
-  --ink:#080a0f;
-  --paper:#f4f2ec;
-  --muted:#b7bfca;
-  --lime:#d7ff55;
-  --violet:#b7a0ff;
-  --cyan:#7be8f5;
-  --line:#ffffff25;
-  --panel:#ffffff08;
-  --field:#0b0d13;
-  --nav:#080a0fd9;
+:root {
+  color-scheme: dark;
+  --ink: #080a0f;
+  --paper: #f4f2ec;
+  --muted: #b7bfca;
+  --lime: #d7ff55;
+  --violet: #b7a0ff;
+  --cyan: #7be8f5;
+  --line: #ffffff25;
+  --panel: #ffffff08;
+  --field: #0b0d13;
+  --nav: #080a0fd9;
 }
-body.light{
-  color-scheme:light;
-  --ink:#f7f5f0;
-  --paper:#11131b;
-  --muted:#454b58;
-  --line:#10152625;
-  --panel:#ffffffb8;
-  --field:#ffffff;
-  --nav:#f7f5f0e8;
+
+/* High-contrast light theme */
+body.light {
+  color-scheme: light;
+  --ink: #f7f5f0;
+  --paper: #11131b;
+  --muted: #343b49;
+  --lime: #286500;
+  --violet: #6336bd;
+  --cyan: #005c70;
+  --line: #10152635;
+  --panel: #ffffffc9;
+  --field: #ffffff;
+  --nav: #f7f5f0f2;
 }
-body.light .nav{color:#11131b}
+
+body.light .nav {
+  color: #11131b;
+}
+
+body.light .kicker,
+body.light .hero h1 em,
+body.light .poster .giant,
+body.light .track b,
+body.light .step .n {
+  color: #286500;
+}
+
+body.light .primary {
+  background: #286500;
+  color: #ffffff;
+  border-color: #286500;
+}
+
+body.light .primary:hover {
+  background: #1e4c00;
+}
+
+body.light .outline {
+  color: #11131b;
+  border-color: #11131b66;
+  background: #ffffffa8;
+}
+
+body.light .tag {
+  color: #005c70;
+}
+
+body.light .sound {
+  color: #11131b;
+  border-color: #11131b66;
+  background: #ffffffd9;
+}
+
+body.light .poster {
+  box-shadow: 0 24px 70px #26301820;
+}
+
+body.light .warning {
+  border-left-color: #6336bd;
+  color: #29213d;
+  background: #6336bd12;
+}
+
+body.light .track,
+body.light .panel {
+  box-shadow: 0 8px 24px #1015260b;
+}
+
+body.light .muted,
+body.light .track p,
+body.light .step p,
+body.light .small {
+  color: #343b49;
+}
+
+body.light .statline {
+  border-color: #10152635;
+}
+
+body.light .sound:focus-visible,
+body.light .btn:focus-visible {
+  outline: 3px solid #286500;
+  outline-offset: 3px;
+}
+
 body.light .nav small,
 body.light .intro,
 body.light .poster p,
 body.light .statline,
-body.light label{color:#303645}
-body.light .sound{
-  color:#11131b;
-  border-color:#11131b55;
-  background:#ffffffb0;
+body.light label {
+  color: #303645;
 }
+
 body.light input,
 body.light select,
-body.light textarea{
-  color:#11131b;
-  border-color:#11131b35;
-  background:var(--field);
+body.light textarea {
+  color: #11131b;
+  border-color: #11131b35;
+  background: #ffffff;
 }
-body.light .city{
-  background:radial-gradient(ellipse at 75% 35%,#b6a0ff55,transparent 36%),linear-gradient(130deg,#e6e1ff,#f7f5f0 70%);
+
+body.light .city {
+  background:
+    radial-gradient(ellipse at 75% 35%, #b6a0ff55, transparent 36%),
+    linear-gradient(130deg, #e6e1ff, #f7f5f0 70%);
 }
-body.light .mountain{
-  background:radial-gradient(ellipse at 68% 45%,#d7ff5570,transparent 30%),linear-gradient(145deg,#e0f0e5,#f7f5f0 70%);
+
+body.light .mountain {
+  background:
+    radial-gradient(ellipse at 68% 45%, #d7ff5570, transparent 30%),
+    linear-gradient(145deg, #e0f0e5, #f7f5f0 70%);
 }
-body.light .river{
-  background:radial-gradient(ellipse at 70% 50%,#7be8f570,transparent 34%),linear-gradient(140deg,#d9f3f5,#f7f5f0 70%);
+
+body.light .river {
+  background:
+    radial-gradient(ellipse at 70% 50%, #7be8f570, transparent 34%),
+    linear-gradient(140deg, #d9f3f5, #f7f5f0 70%);
 }
-body.light .gradient{
-  background:radial-gradient(ellipse at 20% 30%,#ff5db140,transparent 35%),linear-gradient(120deg,#f3e0f5,#f7f5f0 70%);
+
+body.light .gradient {
+  background:
+    radial-gradient(ellipse at 20% 30%, #ff5db140, transparent 35%),
+    linear-gradient(120deg, #f3e0f5, #f7f5f0 70%);
 }
-body.light .last{
-  background:radial-gradient(ellipse at 70% 35%,#d7ff5570,transparent 30%),linear-gradient(130deg,#edf0d8,#f7f5f0 72%);
+
+body.light .last {
+  background:
+    radial-gradient(ellipse at 70% 35%, #d7ff5570, transparent 30%),
+    linear-gradient(130deg, #edf0d8, #f7f5f0 72%);
 }
-body.light .scene:before{
-  background-image:linear-gradient(#1015260b 1px,transparent 1px),linear-gradient(90deg,#1015260b 1px,transparent 1px);
+
+body.light .scene:before {
+  background-image:
+    linear-gradient(#1015260b 1px, transparent 1px),
+    linear-gradient(90deg, #1015260b 1px, transparent 1px);
 }
+
 body.light .track,
 body.light .panel,
-body.light .poster{
-  background:#ffffffa8;
-  border-color:#10152625;
-}
-body.light .warning{
-  color:#30294a;
-  background:#b7a0ff28;
+body.light .poster {
+  background: #ffffffc9;
+  border-color: #10152635;
 }
 
-*{box-sizing:border-box}
-html{
-  scroll-behavior:smooth;
-  scroll-snap-type:y proximity;
-}
-body{
-  margin:0;
-  background:var(--ink);
-  color:var(--paper);
-  font-family:Inter,Arial,sans-serif;
-}
-a{color:inherit}
-button,input,select,textarea{font:inherit}
-.wrap{width:min(1120px,90%);margin:auto}
-
-.nav{
-  position:fixed;
-  z-index:10;
-  top:0;
-  left:0;
-  right:0;
-  padding:18px 5%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:var(--nav);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--line);
-}
-.logo{
-  font-weight:950;
-  letter-spacing:-.06em;
-  text-decoration:none;
-}
-.logo span{color:var(--lime)}
-.nav small{
-  color:#d1d6df;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-.sound{
-  border:1px solid #ffffff50;
-  border-radius:99px;
-  background:#ffffff10;
-  color:white;
-  padding:9px 13px;
-  cursor:pointer;
+* {
+  box-sizing: border-box;
 }
 
-.scene{
-  min-height:100svh;
-  padding:115px 0 70px;
-  display:flex;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
-  scroll-snap-align:start;
-  border-bottom:1px solid var(--line);
-}
-.scene:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:0;
-  background-image:linear-gradient(#ffffff0b 1px,transparent 1px),linear-gradient(90deg,#ffffff0b 1px,transparent 1px);
-  background-size:40px 40px;
-  mask-image:linear-gradient(#000,transparent 88%);
-}
-.scene>*{position:relative;z-index:1}
-
-.city{
-  background:radial-gradient(ellipse at 75% 35%,#b6a0ff38,transparent 36%),linear-gradient(130deg,#121426,#080a0f 65%);
-}
-.mountain{
-  background:radial-gradient(ellipse at 68% 45%,#d7ff5530,transparent 30%),linear-gradient(145deg,#152923,#090e12 70%);
-}
-.river{
-  background:radial-gradient(ellipse at 70% 50%,#7be8f53a,transparent 34%),linear-gradient(140deg,#09252c,#080a0f 70%);
-}
-.gradient{
-  background:radial-gradient(ellipse at 20% 30%,#ff5db128,transparent 35%),linear-gradient(120deg,#22112b,#090a10 70%);
-}
-.last{
-  background:radial-gradient(ellipse at 70% 35%,#d7ff5530,transparent 30%),linear-gradient(130deg,#202315,#080a0f 72%);
+body,
+.scene,
+.track,
+.poster,
+.panel,
+.nav,
+.btn,
+.sound {
+  transition:
+    background-color .22s ease,
+    color .22s ease,
+    border-color .22s ease;
 }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:45px;
-  align-items:center;
-}
-.kicker{
-  font-size:.73rem;
-  text-transform:uppercase;
-  letter-spacing:.2em;
-  color:var(--lime);
-  font-weight:800;
-}
-.hero h1{
-  font-size:clamp(3.7rem,9vw,8rem);
-  letter-spacing:-.09em;
-  line-height:.83;
-  margin:22px 0 28px;
-}
-.hero h1 em{
-  font-style:normal;
-  color:var(--lime);
-}
-.intro{
-  max-width:610px;
-  color:#d3d7e0;
-  font-size:1.1rem;
-  line-height:1.65;
-}
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:14px 18px;
-  border-radius:5px;
-  border:1px solid #ffffff50;
-  text-decoration:none;
-  font-weight:850;
-  cursor:pointer;
-  transition:.2s;
-}
-.btn:hover{transform:translateY(-3px)}
-.primary{
-  background:var(--lime);
-  color:#10130b;
-  border-color:var(--lime);
-}
-.outline{background:#ffffff08}
-.cta-row{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:28px;
-}
-.poster{
-  padding:28px;
-  border:1px solid #ffffff38;
-  background:var(--panel);
-  backdrop-filter:blur(12px);
-  border-radius:16px;
-  transform:rotate(1.5deg);
-  box-shadow:0 30px 100px #0008;
-}
-.poster .giant{
-  font-size:clamp(3rem,6vw,5.5rem);
-  font-weight:950;
-  line-height:.86;
-  letter-spacing:-.09em;
-  color:var(--lime);
-}
-.poster p{color:#d0d6e2}
-.statline{
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  border-top:1px solid var(--line);
-  padding-top:15px;
-  margin-top:18px;
-  color:#d4d9e4;
-  font-size:.82rem;
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
-h2{
-  font-size:clamp(2.5rem,6vw,5rem);
-  letter-spacing:-.075em;
-  line-height:.93;
-  margin:16px 0 20px;
-}
-h3{letter-spacing:-.035em}
-.muted{
-  color:var(--muted);
-  line-height:1.7;
-  max-width:650px;
-}
-.ten{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-  margin-top:32px;
-}
-.track{
-  border:1px solid var(--line);
-  background:var(--panel);
-  padding:18px;
-  border-radius:9px;
-  display:grid;
-  grid-template-columns:42px 1fr;
-  gap:12px;
-}
-.track b{
-  color:var(--lime);
-  font-size:.8rem;
-}
-.track h3{
-  margin:0 0 5px;
-  font-size:1rem;
-}
-.track p{
-  margin:0;
-  color:var(--muted);
-  font-size:.86rem;
-  line-height:1.5;
-}
-.tag{
-  font-size:.68rem;
-  letter-spacing:.1em;
-  color:var(--cyan);
-  text-transform:uppercase;
-}
-.quote{
-  font-size:clamp(2.1rem,5vw,4.5rem);
-  letter-spacing:-.07em;
-  line-height:1.02;
-  max-width:900px;
-}
-.quote span{color:var(--lime)}
-.big-num{
-  font-size:clamp(4rem,11vw,9rem);
-  font-weight:950;
-  letter-spacing:-.1em;
-  line-height:.9;
-}
-.steps{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin:35px 0;
-}
-.step{
-  border-top:2px solid var(--lime);
-  padding:17px 4px;
-}
-.step .n{
-  font-size:.7rem;
-  letter-spacing:.15em;
-  color:var(--lime);
-}
-.step h3{margin:12px 0 8px}
-.step p{
-  font-size:.87rem;
-  color:var(--muted);
-  line-height:1.6;
-}
-.warning{
-  border-left:3px solid var(--violet);
-  padding:13px 17px;
-  background:#b7a0ff12;
-  color:#e5e0f6;
-  max-width:780px;
-  font-size:.9rem;
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: Inter, Arial, sans-serif;
 }
 
-.paybox{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:28px;
-  align-items:start;
-}
-.panel{
-  border:1px solid var(--line);
-  border-radius:13px;
-  padding:23px;
-  background:var(--panel);
-}
-.panel h3{margin:0 0 12px}
-.paynum{
-  font-size:1.55rem;
-  font-weight:900;
-  color:var(--lime);
-}
-.hidden{display:none!important}
-.form-overlay{
-  position:fixed;
-  inset:0;
-  z-index:30;
-  overflow:auto;
-  background:#05060beF;
-  backdrop-filter:blur(18px);
-  padding:5vh 16px;
-}
-.form-shell{
-  width:min(850px,100%);
-  margin:30px auto;
-  background:#10131c;
-  border:1px solid #ffffff35;
-  border-radius:16px;
-  padding:clamp(20px,4vw,38px);
-  box-shadow:0 30px 100px #0009;
-}
-.form-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:14px;
-}
-.form-top h2{font-size:clamp(2rem,5vw,3.6rem)}
-.payrow{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-  align-items:center;
-}
-.fee{
-  font-size:2.4rem;
-  font-weight:950;
-  color:var(--lime);
-  letter-spacing:-.06em;
-}
-.proof-note{
-  border:1px solid #d7ff5570;
-  background:#d7ff5510;
-  padding:12px;
-  border-radius:6px;
-  color:#f4f2ec;
-  font-size:.85rem;
-  line-height:1.55;
-}
-.small{
-  font-size:.82rem;
-  color:var(--muted);
-  line-height:1.6;
-}
-.qr{
-  width:min(100%,270px);
-  aspect-ratio:1;
-  object-fit:contain;
-  background:white;
-  border-radius:10px;
-  padding:10px;
-  display:block;
-  margin:14px auto;
-}
-.formgrid{display:grid;gap:12px}
-label{
-  font-size:.8rem;
-  color:#d9deea;
-  font-weight:750;
-}
-input,select,textarea{
-  display:block;
-  width:100%;
-  margin-top:6px;
-  padding:12px;
-  border-radius:5px;
-  border:1px solid #ffffff30;
-  background:var(--field);
-  color:var(--paper);
-}
-textarea{min-height:90px}
-.footer{
-  padding:30px 0;
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-  flex-wrap:wrap;
-  color:var(--muted);
-  font-size:.82rem;
+a {
+  color: inherit;
 }
 
-@media(max-width:800px){
-  .hero-grid,.paybox,.payrow{grid-template-columns:1fr}
-  .poster{max-width:460px}
-  .steps{grid-template-columns:repeat(2,1fr)}
-  .nav small{display:none}
-  .ten{grid-template-columns:1fr}
-  .scene{padding-top:105px}
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
-@media(max-width:480px){
-  .hero h1{font-size:3.8rem}
-  .steps{grid-template-columns:1fr 1fr}
-  .nav{padding:14px 5%}
+
+.wrap {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+.nav {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-weight: 950;
+  letter-spacing: -.06em;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--lime);
+}
+
+.nav small {
+  color: #d1d6df;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.sound {
+  border: 1px solid #ffffff50;
+  border-radius: 99px;
+  background: #ffffff10;
+  color: white;
+  padding: 9px 13px;
+  cursor: pointer;
+}
+
+.scene {
+  min-height: 100svh;
+  padding: 115px 0 70px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+  border-bottom: 1px solid var(--line);
+}
+
+.scene:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(#ffffff0b 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(#000, transparent 88%);
+}
+
+.scene > * {
+  position: relative;
+  z-index: 1;
+}
+
+.city {
+  background:
+    radial-gradient(ellipse at 75% 35%, #b6a0ff38, transparent 36%),
+    linear-gradient(130deg, #121426, #080a0f 65%);
+}
+
+.mountain {
+  background:
+    radial-gradient(ellipse at 68% 45%, #d7ff5530, transparent 30%),
+    linear-gradient(145deg, #152923, #090e12 70%);
+}
+
+.river {
+  background:
+    radial-gradient(ellipse at 70% 50%, #7be8f53a, transparent 34%),
+    linear-gradient(140deg, #09252c, #080a0f 70%);
+}
+
+.gradient {
+  background:
+    radial-gradient(ellipse at 20% 30%, #ff5db128, transparent 35%),
+    linear-gradient(120deg, #22112b, #090a10 70%);
+}
+
+.last {
+  background:
+    radial-gradient(ellipse at 70% 35%, #d7ff5530, transparent 30%),
+    linear-gradient(130deg, #202315, #080a0f 72%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.kicker {
+  font-size: .73rem;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: var(--lime);
+  font-weight: 800;
+}
+
+.hero h1 {
+  font-size: clamp(3.7rem, 9vw, 8rem);
+  letter-spacing: -.09em;
+  line-height: .83;
+  margin: 22px 0 28px;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--lime);
+}
+
+.intro {
+  max-width: 610px;
+  color: #d3d7e0;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  border-radius: 5px;
+  border: 1px solid #ffffff50;
+  text-decoration: none;
+  font-weight: 850;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.primary {
+  background: var(--lime);
+  color: #10130b;
+  border-color: var(--lime);
+}
+
+.outline {
+  background: #ffffff08;
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.poster {
+  padding: 28px;
+  border: 1px solid #ffffff38;
+  background: var(--panel);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  transform: rotate(1.5deg);
+  box-shadow: 0 30px 100px #0008;
+}
+
+.poster .giant {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 950;
+  line-height: .86;
+  letter-spacing: -.09em;
+  color: var(--lime);
+}
+
+.poster p {
+  color: #d0d6e2;
+}
+
+.statline {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
+  margin-top: 18px;
+  color: #d4d9e4;
+  font-size: .82rem;
+}
+
+h2 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: -.075em;
+  line-height: .93;
+  margin: 16px 0 20px;
+}
+
+h3 {
+  letter-spacing: -.035em;
+}
+
+.muted {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+.ten {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.track {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 18px;
+  border-radius: 9px;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+}
+
+.track b {
+  color: var(--lime);
+  font-size: .8rem;
+}
+
+.track h3 {
+  margin: 0 0 5px;
+  font-size: 1rem;
+}
+
+.track p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.5;
+}
+
+.tag {
+  font-size: .68rem;
+  letter-spacing: .1em;
+  color: var(--cyan);
+  text-transform: uppercase;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 35px 0;
+}
+
+.step {
+  border-top: 2px solid var(--lime);
+  padding: 17px 4px;
+}
+
+.step .n {
+  font-size: .7rem;
+  letter-spacing: .15em;
+  color: var(--lime);
+}
+
+.step h3 {
+  margin: 12px 0 8px;
+}
+
+.step p {
+  font-size: .87rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.warning {
+  border-left: 3px solid var(--violet);
+  padding: 13px 17px;
+  background: #b7a0ff12;
+  color: #e5e0f6;
+  max-width: 780px;
+  font-size: .9rem;
+}
+
+.small {
+  font-size: .82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.footer {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+@media (max-width: 800px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .poster {
+    max-width: 460px;
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav small {
+    display: none;
+  }
+
+  .ten {
+    grid-template-columns: 1fr;
+  }
+
+  .scene {
+    padding-top: 105px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 3.8rem;
+  }
+
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav {
+    padding: 14px 5%;
+  }
 }
 </style>
 </head>
@@ -463,9 +568,14 @@ textarea{min-height:90px}
 <nav class="nav">
   <a class="logo" href="#home">SANGHAMITRA <span>VENTURES</span> / WHY YZ?</a>
   <small>Internships that matter</small>
+
   <div style="display:flex;gap:8px;align-items:center">
-    <button class="sound" id="themeBtn" type="button" aria-label="Switch colour theme">☼ Light mode</button>
-    <button class="sound" id="soundBtn" type="button">▶ Play the vibe</button>
+    <button class="sound" id="themeBtn" type="button" aria-label="Switch colour theme">
+      ☼ Light mode
+    </button>
+    <button class="sound" id="soundBtn" type="button">
+      ▶ Hear the intro
+    </button>
   </div>
 </nav>
 
@@ -473,10 +583,28 @@ textarea{min-height:90px}
   <div class="wrap hero-grid">
     <div>
       <div class="kicker">November & December Cohorts · Now onboarding</div>
-      <h1>THE<br>INTERNSHIP<br>WHICH WILL<br><em>MAKE U STAND OUT.</em></h1>
-      <p class="intro">The work that changes your portfolio, your confidence, your discipline. Strictly shortlisted. Built around real deliverables. Designed for people who want to show what they can do.</p>
+
+      <h1>
+        THE<br>
+        INTERNSHIP<br>
+        WHICH WILL<br>
+        <em>MAKE U STAND OUT.</em>
+      </h1>
+
+      <p class="intro">
+        The work that changes your portfolio, your confidence, your discipline.
+        Strictly shortlisted. Built around real deliverables. Designed for people
+        who want to show what they can do.
+      </p>
+
       <div class="cta-row">
-        <a class="btn primary" href="#apply">Enter the shortlist ↗</a>
+        <a class="btn primary"
+           href="https://forms.gle/meh8wNq87VwspiLW7"
+           target="_blank"
+           rel="noopener noreferrer">
+          Enter the shortlist ↗
+        </a>
+
         <a class="btn outline" href="#tracks">Find your track ↓</a>
       </div>
     </div>
@@ -485,6 +613,7 @@ textarea{min-height:90px}
       <div class="tag">WHY YZ? / November + December intake</div>
       <div class="giant">MAKE<br>YOUR<br>PROOF.</div>
       <p>Not another line on your résumé. A body of work you can explain, demonstrate, and own.</p>
+
       <div class="statline">
         <span>STRICT SHORTLISTING</span>
         <span>LEVEL 01 → LEVEL 02</span>
@@ -497,7 +626,10 @@ textarea{min-height:90px}
   <div class="wrap">
     <div class="kicker">10 focused umbrellas</div>
     <h2>Pick a lane.<br>Build a signal.</h2>
-    <p class="muted">Ten internship tracks. No bloated department list. Choose where your curiosity meets a real deliverable.</p>
+    <p class="muted">
+      Ten internship tracks. No bloated department list.
+      Choose where your curiosity meets a real deliverable.
+    </p>
 
     <div class="ten">
       <div class="track">
@@ -576,7 +708,10 @@ textarea{min-height:90px}
         <b>10</b>
         <div>
           <h3>Time Management</h3>
-          <p>Prioritization and systems that make ambitious work sustainable. Includes a focused special course on time management by Sayantani.</p>
+          <p>
+            Prioritization and systems that make ambitious work sustainable.
+            Includes a focused special course on time management by Sayantani.
+          </p>
         </div>
       </div>
     </div>
@@ -587,37 +722,53 @@ textarea{min-height:90px}
   <div class="wrap">
     <div class="kicker">Selection is earned</div>
     <h2>Not everyone<br>gets through.</h2>
-    <p class="muted">Strict shortlisting will happen. The one-day opening workshop costs ₹100. Payment is mandatory to submit an application; shortlisting is strict and payment does not guarantee selection.</p>
+
+    <p class="muted">
+      Strict shortlisting will happen. The one-day opening workshop registration
+      is ₹100; include your payment proof in the application form.
+      Registration does not guarantee selection.
+    </p>
 
     <div class="steps">
       <div class="step">
         <div class="n">GATE 00</div>
         <h3>Opening workshop</h3>
-        <p>Pay ₹100 for the one-day opening workshop. Upload payment proof in the application form; incomplete submissions are blocked.</p>
+        <p>Attend the opening workshop and follow the instructions shared after registration.</p>
       </div>
 
       <div class="step">
         <div class="n">LEVEL 01 · 15 DAYS</div>
         <h3>Prove your execution</h3>
-        <p>Complete the assigned workflow, milestones, reviews and timeline. Serious, complete participation is required for refund eligibility under the written policy.</p>
+        <p>
+          Complete the assigned workflow, milestones, reviews and timeline.
+          Serious, complete participation is required for refund eligibility
+          under the written policy.
+        </p>
       </div>
 
       <div class="step">
         <div class="n">GATE 02</div>
         <h3>Interview</h3>
-        <p>Level 01 completion does not automatically qualify you. An interview and review determine progression.</p>
+        <p>
+          Level 01 completion does not automatically qualify you.
+          An interview and review determine progression.
+        </p>
       </div>
 
       <div class="step">
         <div class="n">LEVEL 02 · 30 DAYS</div>
         <h3>Deliver at a higher bar</h3>
-        <p>Selected interns complete a further 30-day period with stronger ownership, consistent delivery and a final demonstration.</p>
+        <p>
+          Selected interns complete a further 30-day period with stronger
+          ownership, consistent delivery and a final demonstration.
+        </p>
       </div>
     </div>
 
     <div class="warning">
-      <strong>Payment is non-negotiable for applying.</strong>
-      The ₹100 workshop fee must be paid and proof uploaded before the form can be submitted. Level 1 refund eligibility depends on completing the full workflow and timeline; top-intern refunds are governed by the published criteria and confirmation policy.
+      Level 1 refund eligibility depends on completing the full workflow and
+      timeline; top-intern refunds are governed by the published criteria and
+      confirmation policy.
     </div>
   </div>
 </section>
@@ -626,218 +777,164 @@ textarea{min-height:90px}
   <div class="wrap">
     <div class="kicker">November & December Cohorts · Onboarding now</div>
     <h2>Your next<br>chapter starts here.</h2>
-    <p class="muted">Strictly shortlisted. A one-day opening workshop is the first gate. The application form—and payment scanner—open only when you choose to apply.</p>
+
+    <p class="muted">
+      Strictly shortlisted. A one-day opening workshop is the first gate.
+      The application form opens when you choose to apply.
+    </p>
 
     <div class="cta-row">
-      <button class="btn primary" id="openApply" type="button">Open application + payment ↗</button>
+      <a class="btn primary"
+         href="https://forms.gle/meh8wNq87VwspiLW7"
+         target="_blank"
+         rel="noopener noreferrer">
+        Open application ↗
+      </a>
+
       <a class="btn outline" href="#tracks">Explore the 10 tracks ↓</a>
     </div>
-
-    <p class="small">Workshop registration: ₹100 · Payment proof is mandatory to submit the form.</p>
   </div>
 </section>
 
-<div class="form-overlay hidden" id="applyOverlay" role="dialog" aria-modal="true" aria-labelledby="formTitle">
-  <div class="form-shell">
-    <div class="form-top">
-      <div>
-        <div class="kicker">November & December Cohorts</div>
-        <h2 id="formTitle">Application gate.</h2>
-      </div>
-      <button class="sound" id="closeApply" type="button" aria-label="Close application">✕ Close</button>
-    </div>
-
-    <p class="muted">Step 1: Pay ₹100 for the one-day workshop. Step 2: upload the payment proof below. Step 3: complete your application. No proof, no submission.</p>
-
-    <div class="payrow">
-      <div>
-        <div class="tag">Mandatory workshop payment</div>
-        <div class="fee">₹100 <span style="font-size:.8rem;letter-spacing:0;color:var(--muted);font-weight:650">/ 1-day workshop</span></div>
-        <p class="small">Scan the QR with GPay or another UPI app. Confirm the recipient and ₹100 amount inside your payment app before paying. This page does not process or verify payments automatically.</p>
-        <a class="btn primary" id="upiLink" href="#" rel="nofollow">Open UPI payment app ↗</a>
-        <p class="small" id="qrStatus">Use the scanner below. No phone number is displayed as a payment option.</p>
-      </div>
-
-      <div>
-        <img class="qr" id="upiQr" alt="UPI payment QR scanner for the workshop fee" src="">
-        <p class="small" style="text-align:center">Scan to pay ₹100</p>
-      </div>
-    </div>
-
-    <form class="formgrid" id="applyForm">
-      <label>Full name
-        <input name="name" required placeholder="Your name">
-      </label>
-
-      <label>Email
-        <input name="email" type="email" required placeholder="you@example.com">
-      </label>
-
-      <label>Choose your track
-        <select name="track" required>
-          <option value="">Select one</option>
-          <option>English for Engineers</option>
-          <option>AI / ML / Agentic AI</option>
-          <option>Open Source</option>
-          <option>Competitive Coding</option>
-          <option>LinkedIn + Social Media + SEO</option>
-          <option>Web & Digital Product Development</option>
-          <option>Research & Innovation</option>
-          <option>Entrepreneurship & Business</option>
-          <option>Design & Creative Communication</option>
-          <option>Time Management</option>
-        </select>
-      </label>
-
-      <label>Portfolio / GitHub / LinkedIn / work sample
-        <textarea name="portfolio" placeholder="Links or a short description of your work"></textarea>
-      </label>
-
-      <label>Why should you be shortlisted?
-        <textarea name="why" required placeholder="Specific, concise, honest."></textarea>
-      </label>
-
-      <label>Payment proof screenshot / receipt
-        <input name="proof" id="proof" type="file" accept="image/*,.pdf" required>
-      </label>
-
-      <label>UPI transaction reference
-        <input name="payment" required placeholder="Transaction ID / UTR — required">
-      </label>
-
-      <div class="proof-note">
-        Mandatory: upload a payment screenshot or receipt and enter the transaction reference. Applications without both are blocked. The current standalone prototype cannot securely upload files to a server; after validation, your email app will open and you must attach the selected proof file manually before sending.
-      </div>
-
-      <button class="btn primary" type="submit">Submit application ↗</button>
-
-      <p class="small">This prototype opens a prefilled email to sanghamitra.ventures@gmail.com. It cannot automatically attach the file, save applications online, or verify payment. Your application is not confirmed until the organizer confirms receipt.</p>
-    </form>
-  </div>
-</div>
-
 <footer class="wrap footer">
-  <span><strong>SANGHAMITRA VENTURES</strong> · Flagship: <strong style="color:var(--lime)">WHY YZ?</strong></span>
+  <span>
+    <strong>SANGHAMITRA VENTURES</strong> ·
+    Flagship: <strong style="color:var(--lime)">WHY YZ?</strong>
+  </span>
   <span>Be serious. Be curious. Ship the work.</span>
 </footer>
 
 <script>
-// The scanner is hidden until the applicant deliberately opens the application gate.
-const upiId = '8240858965@ybl';
-const fee = '100.00';
+// Working dark/light mode toggle.
+const themeButton = document.getElementById('themeBtn');
 
-const upiUrl =
-  'upi://pay?pa=' + encodeURIComponent(upiId) +
-  '&pn=' + encodeURIComponent('Sanghamitra Ventures') +
-  '&am=' + fee +
-  '&cu=INR&tn=' + encodeURIComponent('WHY YZ One-Day Workshop');
+themeButton.addEventListener('click', () => {
+  const isLight = document.body.classList.toggle('light');
 
-document.getElementById('upiLink').href = upiUrl;
-document.getElementById('upiQr').src =
-  'https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=' +
-  encodeURIComponent(upiUrl);
+  themeButton.textContent = isLight ? '◐ Dark mode' : '☼ Light mode';
 
-const overlay = document.getElementById('applyOverlay');
-
-document.getElementById('openApply').addEventListener('click', () => {
-  overlay.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-  document.getElementById('formTitle').focus?.();
+  themeButton.setAttribute(
+    'aria-label',
+    isLight ? 'Switch to dark mode' : 'Switch to light mode'
+  );
 });
 
-function closeApply() {
-  overlay.classList.add('hidden');
-  document.body.style.overflow = '';
+// The intro always gives visible feedback.
+// Speech is used when supported by the browser.
+const soundButton = document.getElementById('soundBtn');
+let isSpeaking = false;
+let playbackNotice;
+
+function showPlaybackNotice(message) {
+  if (!playbackNotice) {
+    playbackNotice = document.createElement('div');
+
+    playbackNotice.id = 'playbackNotice';
+    playbackNotice.setAttribute('role', 'status');
+    playbackNotice.setAttribute('aria-live', 'polite');
+
+    playbackNotice.style.cssText = `
+      position: fixed;
+      z-index: 50;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%);
+      width: min(560px, 90vw);
+      padding: 16px 20px;
+      border: 1px solid var(--lime);
+      border-radius: 10px;
+      background: var(--ink);
+      color: var(--paper);
+      box-shadow: 0 12px 40px #0005;
+      line-height: 1.55;
+      text-align: center;
+    `;
+
+    document.body.appendChild(playbackNotice);
+  }
+
+  playbackNotice.textContent = message;
+  playbackNotice.style.display = 'block';
 }
 
-document.getElementById('closeApply').addEventListener('click', closeApply);
-
-overlay.addEventListener('click', event => {
-  if (event.target === overlay) closeApply();
-});
-
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && !overlay.classList.contains('hidden')) {
-    closeApply();
+function stopIntro() {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
   }
-});
 
-// Dark/light mode keeps the luxury gradients and high contrast.
-document.getElementById('themeBtn').addEventListener('click', function () {
-  const light = document.body.classList.toggle('light');
-  this.textContent = light ? '◐ Dark mode' : '☼ Light mode';
-});
+  isSpeaking = false;
+  soundButton.textContent = '▶ Hear the intro';
+}
 
-// Validate required payment evidence before opening the email composer.
-document.getElementById('applyForm').addEventListener('submit', function (event) {
-  event.preventDefault();
+soundButton.addEventListener('click', () => {
+  if (isSpeaking) {
+    stopIntro();
 
-  const formData = new FormData(this);
-  const file = formData.get('proof');
+    showPlaybackNotice(
+      'Intro stopped. Press “Hear the intro” whenever you’re ready.'
+    );
 
-  if (!file || !file.name) {
-    alert('Payment proof is mandatory. Upload your ₹100 workshop payment receipt before submitting.');
     return;
   }
 
-  if (!formData.get('payment') || !String(formData.get('payment')).trim()) {
-    alert('Enter the UPI transaction reference to submit your application.');
+  const introText =
+    'Welcome to Why Y Z. The internship which will make you stand out. ' +
+    'November and December cohorts are onboarding. Ten focused tracks. ' +
+    'Strict shortlisting. Real work. Pick your track. Build your proof.';
+
+  // Visible reaction happens even when audio is unsupported.
+  showPlaybackNotice('INTRO · ' + introText);
+
+  if (
+    !('speechSynthesis' in window) ||
+    typeof SpeechSynthesisUtterance === 'undefined'
+  ) {
+    soundButton.textContent = '↻ Replay intro';
     return;
   }
 
-  const subject = encodeURIComponent(
-    'WHY YZ? Internship Application — ' + formData.get('name')
-  );
+  try {
+    window.speechSynthesis.cancel();
 
-  const body = encodeURIComponent(
-    'WHY YZ? INTERNSHIP APPLICATION\n\n' +
-    'Cohort: November / December\n' +
-    'Workshop payment: ₹100\n' +
-    'Name: ' + formData.get('name') + '\n' +
-    'Email: ' + formData.get('email') + '\n' +
-    'Track: ' + formData.get('track') + '\n' +
-    'Portfolio: ' + formData.get('portfolio') + '\n' +
-    'Why shortlisted: ' + formData.get('why') + '\n' +
-    'UPI transaction reference: ' + formData.get('payment') + '\n' +
-    'Payment proof file to attach manually: ' + file.name + '\n\n' +
-    'I have paid ₹100 for the one-day workshop. Please verify payment and confirm registration.'
-  );
+    const utterance = new SpeechSynthesisUtterance(introText);
 
-  window.location.href =
-    'mailto:sanghamitra.ventures@gmail.com?subject=' + subject + '&body=' + body;
-});
+    utterance.rate = 0.92;
+    utterance.pitch = 0.95;
 
-// Playable intro toggle.
-let playing = false;
+    utterance.onstart = () => {
+      isSpeaking = true;
+      soundButton.textContent = '■ Stop intro';
 
-document.getElementById('soundBtn').addEventListener('click', function () {
-  if (!('speechSynthesis' in window)) {
-    alert('Text playback is not supported in this browser.');
-    return;
+      showPlaybackNotice('▶ PLAYING INTRO · ' + introText);
+    };
+
+    utterance.onend = () => {
+      isSpeaking = false;
+      soundButton.textContent = '↻ Replay intro';
+
+      showPlaybackNotice('INTRO COMPLETE · ' + introText);
+    };
+
+    utterance.onerror = () => {
+      isSpeaking = false;
+      soundButton.textContent = '↻ Replay intro';
+
+      showPlaybackNotice(
+        'Audio playback is unavailable in this browser. ' +
+        'The intro text is shown here instead: ' + introText
+      );
+    };
+
+    window.speechSynthesis.speak(utterance);
+
+  } catch (error) {
+    isSpeaking = false;
+    soundButton.textContent = '↻ Replay intro';
+
+    showPlaybackNotice(
+      'Audio playback is unavailable in this browser. ' + introText
+    );
   }
-
-  if (playing) {
-    speechSynthesis.cancel();
-    playing = false;
-    this.textContent = '▶ Play the vibe';
-    return;
-  }
-
-  const message = new SpeechSynthesisUtterance(
-    'Welcome to Why Y Z. The internship which will make you stand out. November and December cohorts are onboarding. Strict shortlisting. Real work. Pick your track. Build your proof.'
-  );
-
-  message.rate = 0.94;
-  message.pitch = 0.92;
-
-  message.onend = () => {
-    playing = false;
-    document.getElementById('soundBtn').textContent = '▶ Play the vibe';
-  };
-
-  playing = true;
-  this.textContent = '■ Stop playback';
-  speechSynthesis.speak(message);
 });
 </script>
 
